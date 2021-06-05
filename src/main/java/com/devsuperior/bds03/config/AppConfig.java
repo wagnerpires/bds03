@@ -23,6 +23,7 @@ public class AppConfig {
 		JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
 		tokenConverter.setSigningKey(jwtSecret); //Por enquanto hard code
 		return tokenConverter;
+		
 	}
 
 	@Bean
