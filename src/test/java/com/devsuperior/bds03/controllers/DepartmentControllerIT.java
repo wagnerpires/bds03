@@ -67,10 +67,10 @@ public class DepartmentControllerIT {
 					.header("Authorization", "Bearer " + accessToken)
 					.contentType(MediaType.APPLICATION_JSON));
 
-		result.andExpect(status().isOk());
 		result.andExpect(jsonPath("$[0].name").value("Management"));
 		result.andExpect(jsonPath("$[1].name").value("Sales"));
 		result.andExpect(jsonPath("$[2].name").value("Training"));
+		result.andExpect(status().isOk());		
 	}
 	
 	@Test
